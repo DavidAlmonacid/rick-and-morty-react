@@ -1,5 +1,5 @@
-import Characters from './Characters';
 import { useEffect, useState } from 'react';
+import Characters from './Characters/Characters';
 
 const AppHome = () => {
   const [characters, setCharacters] = useState([]);
@@ -21,11 +21,7 @@ const AppHome = () => {
     getData();
   }, []);
 
-  return (
-    <div>
-      <Characters characters={characters} />
-    </div>
-  );
+  return <Characters characters={characters} />;
 };
 
 export default AppHome;
