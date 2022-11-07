@@ -2,7 +2,7 @@ import CharacterCard from './CharacterCard';
 
 const Characters = ({ characters }) => {
   return (
-    <section>
+    <section className='grid gap-2'>
       {characters.map((character) => (
         <CharacterCard
           key={character.id}
