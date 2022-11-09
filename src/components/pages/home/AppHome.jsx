@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Characters from './Characters/Characters';
+import Characters from './characters/Characters';
 
 const AppHome = () => {
   const [characters, setCharacters] = useState([]);
