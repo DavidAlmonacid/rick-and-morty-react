@@ -2,7 +2,7 @@ import CharacterCard from './CharacterCard';
 
 const Characters = ({ characters }) => {
   return (
-    <section className='grid gap-2'>
+    <section className='flex flex-wrap justify-center gap-x-9 gap-y-10 mx-auto py-9 max-w-7xl'>
       {characters.map((character) => (
         <CharacterCard
           key={character.id}

@@ -1,8 +1,8 @@
-#character-card * {
+#character-card > * {
   @apply absolute bg-red-400/50;
 }
 
-#character-card:hover :last-child {
+#character-card:hover > :last-child {
   @apply block;
   animation-name: up;
   animation-duration: 500ms;
