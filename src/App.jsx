@@ -1,7 +1,7 @@
 import AppHome from './components/pages/home/AppHome';
 
-function App() {
+const App = () => {
   return <AppHome />;
-}
+};
 
 export default App;
