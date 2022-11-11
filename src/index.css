@@ -4,9 +4,17 @@
 
 @layer base {
   body {
-    @apply min-w-[375px] min-h-screen bg-[#436a70];
+    @apply min-w-[360px] min-h-screen bg-[#436a70];
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+}
+
+.status-alive {
+  @apply bg-emerald-600;
+}
+
+.status-dead {
+  @apply bg-red-800;
 }
