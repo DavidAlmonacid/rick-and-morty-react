@@ -6,10 +6,11 @@ const Characters = ({ characters }) => {
       {characters.map((character) => (
         <CharacterCard
           key={character.id}
+          gender={character.gender}
+          id={character.id}
+          image={character.image}
           name={character.name}
           status={character.status}
-          gender={character.gender}
-          image={character.image}
         />
       ))}
     </section>

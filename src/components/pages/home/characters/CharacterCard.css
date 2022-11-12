@@ -5,7 +5,7 @@
 .character-card:hover > :last-child {
   @apply block;
   animation-name: up;
-  animation-duration: 500ms;
+  animation-duration: 400ms;
   animation-iteration-count: 1;
   animation-timing-function: cubic-bezier(0.32, 0, 0.67, 0);
 }

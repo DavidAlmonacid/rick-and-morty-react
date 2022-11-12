@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply min-w-[360px] min-h-screen bg-[#436a70];
+    @apply min-w-[360px] min-h-screen bg-[#A6B6A2];
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

@@ -11,7 +11,7 @@ const AppHome = () => {
       try {
         const response = await fetch(API);
         const data = await response.json();
-        console.log(data);
+        // console.log(data);
         setCharacters(data.results);
       } catch (error) {
         console.error(error);
