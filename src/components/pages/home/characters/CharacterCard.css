@@ -3,7 +3,7 @@
 }
 
 .character-card:hover > :last-child {
-  @apply block;
+  @apply grid;
   animation-name: up;
   animation-duration: 400ms;
   animation-iteration-count: 1;

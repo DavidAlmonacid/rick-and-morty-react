@@ -9,6 +9,10 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  picture {
+    @apply inline-flex;
+  }
 }
 
 .status-alive {

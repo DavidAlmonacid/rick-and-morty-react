@@ -10,6 +10,7 @@ const Characters = ({ characters }) => {
           id={character.id}
           image={character.image}
           name={character.name}
+          specie={character.species}
           status={character.status}
         />
       ))}
