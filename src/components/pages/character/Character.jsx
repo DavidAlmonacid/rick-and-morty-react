@@ -1,48 +1,48 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
+// Page example
+// https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto:good,w_900/Challenges/txrtsxgbdjxjwamhysxx.jpg
+
 const Character = () => {
   const { characterId } = useParams();
-  const [characterInfo, setCharacterInfo] = useState({});
+  const [character, setCharacter] = useState({});
   const [loading, setLoading] = useState(true);
+  const API_CHARACTER = `https://rickandmortyapi.com/api/character/${characterId}`;
 
   useEffect(() => {
     const characterData = async () => {
-      const character = await fetch(
-        `https://rickandmortyapi.com/api/character/${characterId}`
-      );
-      const characterData = await character.json();
-      console.log(characterData);
-      setCharacterInfo(characterData);
+      const response = await fetch(API_CHARACTER);
+      const data = await response.json();
+      console.log(data);
+      setCharacter(data);
 
       setTimeout(() => {
         setLoading(false);
-      }, 1400);
+      }, 1200);
     };
 
     characterData();
   }, []);
 
-  if (loading) {
-    return <p>loading...</p>;
-  }
-
-  return (
+  return loading ? (
+    <p>loading...</p>
+  ) : (
     <div>
-      <h1>{characterInfo.name}</h1>
+      <h1>{character.name}</h1>
 
       <picture>
-        <img src={characterInfo.image} alt={characterInfo.name} />
+        <img src={character.image} alt={character.name} />
       </picture>
 
       <section>
         <span>Location: </span>
-        <span>{characterInfo.location.name}</span>
+        <span>{character.location.name}</span>
       </section>
 
       <section>
         <span>Status: </span>
-        <span>{characterInfo.status}</span>
+        <span>{character.status}</span>
       </section>
     </div>
   );
