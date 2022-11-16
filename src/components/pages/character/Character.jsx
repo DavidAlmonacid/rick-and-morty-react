@@ -21,36 +21,66 @@ const Character = () => {
 
       setTimeout(() => {
         setLoading(false);
-      }, 1600);
+      }, 1200);
     };
 
     characterData();
   }, []);
 
   return (
-    <div>
+    <div
+      className={`grid justify-items-center py-9 ${
+        loading ? 'items-center h-screen' : ''
+      }`.trim()}
+    >
       {loading ? (
-        <picture className='grid place-items-center min-h-screen'>
+        <picture>
           <img src={Loading} alt='loading icon' className='animate-spin' />
         </picture>
       ) : (
-        <section>
-          <h1>{character.name}</h1>
+        <div className='w-full max-w-5xl'>
+          <section className='grid grid-cols-2 place-items-center gap-x-3 gap-y-5 px-5 text-center'>
+            <h1 className='text-3xl  font-medium'>{character.name}</h1>
 
-          <picture>
-            <img src={character.image} alt={character.name} />
-          </picture>
+            <picture>
+              <img
+                src={character.image}
+                alt={character.name}
+                className='rounded-2xl shadow-lg'
+              />
+            </picture>
 
-          <section>
-            <span>Location: </span>
-            <span>{character.location.name}</span>
+            <section>
+              <h2>Location</h2>
+              <span>{character.location.name}</span>
+            </section>
+
+            <section>
+              <h2>Origin</h2>
+              <span>{character.origin.name}</span>
+            </section>
+
+            <section>
+              <h2>Status</h2>
+              <span>{character.status}</span>
+            </section>
+
+            <section>
+              <h2>Specie</h2>
+              <span>{character.species}</span>
+            </section>
+
+            <section>
+              <h2>Sex</h2>
+              <span>{character.gender}</span>
+            </section>
+
+            <section>
+              <h2>Episodes</h2>
+              <span>{character.episode.length}</span>
+            </section>
           </section>
-
-          <section>
-            <span>Status: </span>
-            <span>{character.status}</span>
-          </section>
-        </section>
+        </div>
       )}
     </div>
   );

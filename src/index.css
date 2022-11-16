@@ -4,10 +4,14 @@
 
 @layer base {
   body {
-    @apply min-w-[360px] min-h-screen bg-[#A6B6A2];
+    @apply min-w-[360px]  bg-[#A6B6A2];
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  #root {
+    @apply min-h-screen;
   }
 
   picture {
