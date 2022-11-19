@@ -2,9 +2,8 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import Loading from '/assets/icons/loading-icon.svg';
-
-// Page example
-// https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto:good,w_900/Challenges/txrtsxgbdjxjwamhysxx.jpg
+import HumanSymbolDark from '/assets/icons/human-symbol-dark.svg';
+import AlienSymbol from '/assets/icons/alien-symbol.svg';
 
 const Character = () => {
   const { characterId } = useParams();
@@ -39,10 +38,12 @@ const Character = () => {
         </picture>
       ) : (
         <div className='w-full max-w-5xl'>
-          <section className='grid grid-cols-2 place-items-center gap-x-3 gap-y-5 px-5 text-center'>
-            <h1 className='text-3xl  font-medium'>{character.name}</h1>
+          <section className='grid grid-cols-2 place-items-center gap-x-3 gap-y-14 px-5 text-center sm:grid-cols-3'>
+            <h1 className='text-3xl  font-medium sm:col-span-2'>
+              {character.name}
+            </h1>
 
-            <picture>
+            <picture className='lg:row-span-2'>
               <img
                 src={character.image}
                 alt={character.name}
@@ -51,33 +52,43 @@ const Character = () => {
             </picture>
 
             <section>
-              <h2>Location</h2>
-              <span>{character.location.name}</span>
+              <h2 className='text-lg font-medium'>Location</h2>
+              <span className='text-[15px] capitalize'>
+                {character.location.name}
+              </span>
             </section>
 
             <section>
-              <h2>Origin</h2>
-              <span>{character.origin.name}</span>
+              <h2 className='text-lg font-medium'>Origin</h2>
+              <span className='text-[15px] capitalize'>
+                {character.origin.name}
+              </span>
             </section>
 
             <section>
-              <h2>Status</h2>
-              <span>{character.status}</span>
+              <h2 className='text-lg font-medium'>Status</h2>
+              <span className='text-[15px] capitalize'>{character.status}</span>
             </section>
 
             <section>
-              <h2>Specie</h2>
-              <span>{character.species}</span>
+              <h2 className='text-lg font-medium'>Specie</h2>
+              <span className='text-[15px]'>{character.species}</span>
+              <picture className='ml-2'>
+                <img
+                  src={HumanSymbolDark}
+                  alt={`${character.species.toLowerCase()} symbol`}
+                />
+              </picture>
             </section>
 
             <section>
-              <h2>Sex</h2>
-              <span>{character.gender}</span>
+              <h2 className='text-lg font-medium'>Sex</h2>
+              <span className='text-[15px] capitalize'>{character.gender}</span>
             </section>
 
             <section>
-              <h2>Episodes</h2>
-              <span>{character.episode.length}</span>
+              <h2 className='text-lg font-medium'>Episodes</h2>
+              <span className='text-[15px]'>{character.episode.length}</span>
             </section>
           </section>
         </div>

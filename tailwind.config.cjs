@@ -2,6 +2,10 @@
 module.exports = {
   content: ['./index.html', './src/**/*.jsx'],
   theme: {
+    screens: {
+      'sm': '640px',
+      'lg': '880px',
+    },
     fontFamily: {
       sans: ['Noto Sans', 'sans-serif'],
     },
