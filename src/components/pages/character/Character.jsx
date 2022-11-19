@@ -42,7 +42,6 @@ const Character = () => {
             <h1 className='text-3xl  font-medium sm:col-span-2'>
               {character.name}
             </h1>
-
             <picture className='lg:row-span-2'>
               <img
                 src={character.image}
