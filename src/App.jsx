@@ -1,16 +1,19 @@
-import AppHome from './components/pages/home/AppHome';
-import Character from './components/pages/character/Character';
 import { Route, Routes } from 'react-router-dom';
+import AppHome from './pages/Home/Home';
+import Character from './pages/Character/Character';
+import Layout from './components/layout/Layout';
 
 // Follow documentation
 // https://blog.webdevsimplified.com/2022-07/react-router/
 
 const App = () => {
   return (
-    <Routes>
-      <Route path='/' element={<AppHome />} />
-      <Route path='/character/:characterId' element={<Character />} />
-    </Routes>
+    <Layout>
+      <Routes>
+        <Route path='/' element={<AppHome />} />
+        <Route path='/character/:characterId' element={<Character />} />
+      </Routes>
+    </Layout>
   );
 };
 
