@@ -23,7 +23,7 @@ const Home = () => {
 
   return (
     <Layout>
-      <div className='flex mx-12 py-2 justify-between'>
+      <div className='flex mx-12 justify-between'>
         <button>Prev</button>
         <button>Next</button>
       </div>

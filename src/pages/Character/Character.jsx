@@ -40,11 +40,11 @@ const Character = () => {
       ) : (
         <Layout>
           <div className='w-full max-w-5xl'>
-            <div className='flex mx-12 py-2 justify-between'>
+            <div className='flex mx-12 justify-between'>
               <Link to={'/'}>Back</Link>
             </div>
 
-            <section className='grid grid-cols-2 place-items-center gap-x-3 gap-y-14 py-9 px-5 text-center sm:grid-cols-3'>
+            <section className='grid grid-cols-2 place-items-center gap-x-3 gap-y-14 py-3 px-5 text-center sm:grid-cols-3 lg:auto-rows-[104px]'>
               <h1 className='text-3xl  font-medium sm:col-span-2'>
                 {character.name}
               </h1>
@@ -80,12 +80,6 @@ const Character = () => {
               <section>
                 <h2 className='text-lg font-medium'>Specie</h2>
                 <span className='text-[15px]'>{character.species}</span>
-                <picture className='ml-2'>
-                  <img
-                    src={HumanSymbolDark}
-                    alt={`${character.species.toLowerCase()} symbol`}
-                  />
-                </picture>
               </section>
 
               <section>
