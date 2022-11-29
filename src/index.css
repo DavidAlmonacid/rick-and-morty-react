@@ -4,18 +4,23 @@
 
 @layer base {
   body {
-    @apply min-w-[360px] bg-[#cecbc0];
+    @apply min-w-[360px] min-h-screen bg-[#cecbc0];
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   #root {
-    @apply min-h-screen;
+    @apply pb-4;
   }
 
   picture {
     @apply flex;
+  }
+
+  button,
+  .button {
+    @apply border border-[#b5c226] rounded-lg py-[3px] px-3 bg-[#17859e] text-white shadow shadow-[#d0db4b]/40;
   }
 }
 

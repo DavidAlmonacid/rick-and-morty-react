@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import Loading from '/assets/icons/loading-icon.svg';
 import HumanSymbolDark from '/assets/icons/human-symbol-dark.svg';
 import AlienSymbol from '/assets/icons/alien-symbol.svg';
-import Layout from '../../components/layout/Layout';
+import Layout from '../../components/Layout/Layout';
 
 const Character = () => {
   const { characterId } = useParams();
@@ -16,7 +16,6 @@ const Character = () => {
     const characterData = async () => {
       const response = await fetch(API_CHARACTER);
       const data = await response.json();
-      console.log(data);
       setCharacter(data);
 
       setTimeout(() => {
@@ -40,11 +39,13 @@ const Character = () => {
       ) : (
         <Layout>
           <div className='w-full max-w-5xl'>
-            <div className='flex mx-12 justify-between'>
-              <Link to={'/'}>Back</Link>
+            <div className='flex mx-12 py-2 justify-between'>
+              <Link to='/' className='button'>
+                Back
+              </Link>
             </div>
 
-            <section className='grid grid-cols-2 place-items-center gap-x-3 gap-y-14 py-3 px-5 text-center sm:grid-cols-3 lg:auto-rows-[104px]'>
+            <section className='grid grid-cols-2 place-items-center gap-x-3 gap-y-14 py-3 px-5 text-center sm:grid-cols-3 lg:auto-rows-[100px]'>
               <h1 className='text-3xl  font-medium sm:col-span-2'>
                 {character.name}
               </h1>

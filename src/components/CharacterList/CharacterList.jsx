@@ -2,7 +2,7 @@ import CharacterCard from '../CharacterCard/CharacterCard';
 
 const Characters = ({ characters }) => {
   return (
-    <section className='flex flex-wrap justify-center gap-x-9 gap-y-10 mx-auto py-9 max-w-7xl'>
+    <section className='flex flex-wrap justify-center gap-x-9 gap-y-10 mx-auto py-3 max-w-7xl'>
       {characters.map((character) => (
         <CharacterCard
           key={character.id}

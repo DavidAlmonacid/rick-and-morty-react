@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import CharacterList from '../../components/CharacterList/CharacterList';
-import Layout from '../../components/layout/Layout';
+import Layout from '../../components/Layout/Layout';
+import PageButtons from '../../components/PageButtons/PageButtons';
 
 const Home = () => {
   const [characters, setCharacters] = useState([]);
@@ -19,15 +20,13 @@ const Home = () => {
     };
 
     getData();
-  }, []);
+  }, [page]);
 
   return (
     <Layout>
-      <div className='flex mx-12 justify-between'>
-        <button>Prev</button>
-        <button>Next</button>
-      </div>
-      <CharacterList characters={characters} />;
+      <PageButtons page={page} setPage={setPage} />
+      <CharacterList characters={characters} />
+      <PageButtons page={page} setPage={setPage} />
     </Layout>
   );
 };
