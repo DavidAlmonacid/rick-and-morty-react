@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply min-w-[360px]  bg-[#A6B6A2];
+    @apply min-w-[360px]  bg-[#cecbc0];
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -15,7 +15,7 @@
   }
 
   picture {
-    @apply inline-flex;
+    @apply flex;
   }
 }
 
