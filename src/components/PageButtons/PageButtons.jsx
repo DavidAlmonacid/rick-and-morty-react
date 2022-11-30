@@ -11,7 +11,7 @@ const PageButtons = ({ page, setPage }) => {
     <div className='flex mx-12 py-2 justify-between'>
       <button
         disabled={page === 1 && true}
-        title={page !== 1 && `Previous: Page ${page - 1}`}
+        title={page !== 1 ? `Previous: Page ${page - 1}` : ''}
         className='disabled:opacity-60 disabled:cursor-not-allowed'
         onClick={handlePrev}
       >
@@ -20,7 +20,7 @@ const PageButtons = ({ page, setPage }) => {
 
       <button
         disabled={page === 42 && true}
-        title={page !== 42 && `Next: Page ${page + 1}`}
+        title={page !== 42 ? `Next: Page ${page + 1}` : ''}
         className='disabled:opacity-60 disabled:cursor-not-allowed'
         onClick={handleNext}
       >
