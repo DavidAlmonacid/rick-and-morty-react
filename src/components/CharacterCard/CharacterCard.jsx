@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import MaleSymbol from '/assets/icons/male-symbol.svg';
 import FemaleSymbol from '/assets/icons/female-symbol.svg';
 import UnknownSymbol from '/assets/icons/unknown-symbol.svg';
-import HumanSymbolLight from '/assets/icons/human-symbol-light.svg';
+import HumanSymbol from '/assets/icons/human-symbol.svg';
 import AlienSymbol from '/assets/icons/alien-symbol.svg';
 
 import './CharacterCard.css';
@@ -20,7 +20,7 @@ const CharacterCard = ({ gender, id, image, name, specie, status }) => {
 
   let specieSymbol;
   if (specie.toLowerCase() === 'human') {
-    specieSymbol = HumanSymbolLight;
+    specieSymbol = HumanSymbol;
   } else {
     specieSymbol = AlienSymbol;
   }

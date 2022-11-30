@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
 import Loading from '/assets/icons/loading-icon.svg';
-import HumanSymbolDark from '/assets/icons/human-symbol-dark.svg';
-import AlienSymbol from '/assets/icons/alien-symbol.svg';
 import Layout from '../../components/Layout/Layout';
 
 const Character = () => {
