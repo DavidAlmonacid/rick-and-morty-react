@@ -54,7 +54,9 @@ const CharacterCard = ({ gender, id, image, name, specie, status }) => {
         </picture>
 
         <div className='bottom-0 w-full px-2 hidden items-center h-[60px] bg-slate-700/60 backdrop-blur-[1px] rounded'>
-          <p className='drop-shadow-text'>{name}</p>
+          <p className='drop-shadow-text whitespace-nowrap text-ellipsis overflow-hidden'>
+            {name}
+          </p>
 
           <div className='flex items-center gap-[6px]'>
             <picture className='justify-center w-5'>
