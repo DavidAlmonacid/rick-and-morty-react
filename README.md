@@ -9,7 +9,7 @@ This app was build following the [React, Rick and Morty REST API (con Vitejs y G
 ![](https://i.imgur.com/vzNWAl6.png)
 
 <div align="center">
-  <a href="https://bit.ly/3Vm1xB3"><img src="https://img.shields.io/badge/visit the site-d0db4b?style=for-the-badge" /></a>
+  <a href="https://rick-and-morty-david.netlify.app/"><img src="https://img.shields.io/badge/visit the site-d0db4b?style=for-the-badge" /></a>
 </div>
 
 #
